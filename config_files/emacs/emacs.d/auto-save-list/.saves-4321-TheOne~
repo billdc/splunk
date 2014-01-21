@@ -1,0 +1,10 @@
+/home/ftp/splunk/etc/apps/search/appserver/static/my_script.js
+/home/ftp/splunk/etc/apps/search/appserver/static/#my_script.js#
+/home/neo/splunk/etc/apps/testdj/django/testdj/views.py
+/home/neo/splunk/etc/apps/testdj/django/testdj/#views.py#
+/home/neo/splunk/etc/apps/testdj/django/testdj/urls.py
+/home/neo/splunk/etc/apps/testdj/django/testdj/#urls.py#
+/home/neo/splunk/etc/apps/testdj/django/testdj/templates/search.html
+/home/neo/splunk/etc/apps/testdj/django/testdj/templates/#search.html#
+/home/neo/splunk/etc/apps/testdj/django/testdj/templates/map.html
+/home/neo/splunk/etc/apps/testdj/django/testdj/templates/#map.html#

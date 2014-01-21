@@ -1,0 +1,140 @@
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+(set-scroll-bar-mode 'right)
+(setq frame-title-format  
+      '("%S" (buffer-file-name "%f"  
+                   (dired-directory dired-directory "%b"))))
+(global-font-lock-mode t)
+(set-background-color "#2c001e")
+(set-foreground-color "white")
+(set-cursor-color "Orchid")
+(blink-cursor-mode -1)
+(set-mouse-color "Orchid")
+(set-face-foreground 'region "green")
+(set-face-background 'region "blue")
+(set-default-font "Monospace-12")
+(setq-default indent-tabs-mode nil)
+(global-set-key (kbd "C-z") 'undo)
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'molokai t)
+(tool-bar-mode nil)
+(require 'semantic/analyze)
+(provide 'semantic-analyze)
+(provide 'semantic-ctxt)
+(provide 'semanticdb)
+(provide 'semanticdb-find)
+(provide 'semanticdb-mode)
+(provide 'semantic-load)
+
+
+
+;;(require 'cedet)
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/ecb")
+(require 'ecb)
+(require 'ecb-autoloads)
+
+(add-to-list 'load-path "~/.emacs.d/plugins/auto-complete")  
+(require 'auto-complete-config)  
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/ac-dict")  
+(ac-config-default)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("9fd20670758db15cc4d0b4442a74543888d2e445646b25f2755c65dcd6f1504b" default)))
+ '(ecb-layout-window-sizes (quote (("left8" (ecb-directories-buffer-name 0.21428571428571427 . 0.2909090909090909) (ecb-sources-buffer-name 0.21428571428571427 . 0.23636363636363636) (ecb-methods-buffer-name 0.21428571428571427 . 0.2727272727272727) (ecb-history-buffer-name 0.21428571428571427 . 0.18181818181818182)))))
+ '(ecb-options-version "2.40")
+ '(menu-bar-mode nil)
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(add-to-list 'load-path "~/.emacs.d/plugins")
+(require 'highlight-indentation)
+
+
+(setq evernote-enml-formatter-command '("w3m" "-dump" "-I" "UTF8" "-O" "UTF8")) ; option
+
+(global-set-key [M-left] 'windmove-left)
+(global-set-key [M-right] 'windmove-right)
+(global-set-key [M-up] 'windmove-up)
+(global-set-key [M-down] 'windmove-down)
+
+
+(define-key global-map [(control f1)] 'ecb-hide-ecb-windows)
+(define-key global-map [(control f2)] 'ecb-show-ecb-windows)
+(define-key global-map "\C-c1" 'ecb-maximize-window-directories)
+(define-key global-map "\C-c2" 'ecb-maximize-window-sources)
+(define-key global-map "\C-c3" 'ecb-maximize-window-methods)
+(define-key global-map "\C-c4" 'ecb-maximize-window-history)
+(define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
+
+;;ibuffer
+(require 'ibuffer)
+(global-set-key [f4] 'ibuffer)
+(setq default-major-mode 'text-mode)
+(global-set-key [f1] 'shell);F1进入Shell
+(global-linum-mode 'linum-mode);;在左边显示行号
+(fset 'yes-or-no-p 'y-or-n-p);以 y/n代表 yes/no
+(column-number-mode t);显示列号
+(show-paren-mode t);显示括号匹配
+(setq show-paren-mode t) ;;打开括号匹配显示模式
+(setq show-paren-style 'parenthesis)
+(defun my-common-mode-auto-pair ()
+    (interactive)
+      (make-local-variable 'skeleton-pair-alist)
+        (setq skeleton-pair-alist  '(
+                                         (? ? _ "''")
+                                             (? ? _ """")
+                                                 (? ?  _ "()")
+                                                     (? ?  _ "[]")
+                                                         (?{ \n > _ \n ?} >)))
+          (setq skeleton-pair t)
+            (local-set-key (kbd "(") 'skeleton-pair-insert-maybe)
+              (local-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
+                (local-set-key (kbd "{") 'skeleton-pair-insert-maybe)
+                  (local-set-key (kbd "\'") 'skeleton-pair-insert-maybe)
+                    (local-set-key (kbd "[") 'skeleton-pair-insert-maybe))
+(add-hook 'c-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'c++-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'java-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'lisp-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'php-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'python-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'html-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'scheme-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'css-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'sql-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'emacs-lisp-mode-hook 'my-common-mode-auto-pair)
+(add-hook 'text-mode-hook 'my-common-mode-auto-pair)
+ 
+(setq x-select-enable-clipboard t);支持emacs和外部程序的粘贴
+(setq frame-title-format '("Emacs@ " buffer-file-name " " ));
+;鼠标滚轮，默认的滚动太快，这里改为3行
+(defun up-slightly () (interactive) (scroll-up 1))
+(defun down-slightly () (interactive) (scroll-down 1))
+(global-set-key [mouse-4] 'down-slightly)
+(global-set-key [mouse-5] 'up-slightly)
+
+(add-to-list 'load-path "/home/neo/.emacs.d/plugins/javascript")    
+(autoload 'js2-mode "js2-mode" nil t)    
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))    
+(add-hook 'js2-mode-hook 'my-common-mode-auto-pair)  
+
+(require 'multi-web-mode)
+(setq mweb-default-major-mode 'html-mode)
+(setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+                  (js-mode "<script +\\(type=\"text/javascript\"\\|language=\"javascript\"\\)[^>]*>" "</script>")
+                  (js-mode "<script>""</script>")
+                  (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
+(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
+(multi-web-global-mode 1)

@@ -1,0 +1,128 @@
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+ls
+git status
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+./clean_fishbucket.sh 
+git status
+git add clean_fishbucket.sh 
+git commit -m "finish"
+git push origin master
+ls
+git status
+git log
+ls
+cd splunk/
+ls
+cd etc/apps/srcb_map/
+ls
+git status
+ls
+la
+ls -all
+cd .git/
+cd ..
+ls -all
+ls
+git status
+git status
+git status
+git status
+git status
+git status
+git stauts
+git status
+git status
+ls
+git status
+s
+ls
+cd django/
+ls
+cd srcb_map/
+ls
+cp search_head_manager.py search_manager.py
+git status
+git stauts
+git stauts
+git status
+git add search_manager.py 
+git commit -m "1.16"
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+ls -all
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+python big_map.py 
+ python big_map.py 
+ python big_map.py 
+ python big_map.py 
+ python big_map.py 
+ python big_map.py 
+ python big_map.py 
+ python big_map.py 
+ python big_map.py 
+ python big_map.py 
