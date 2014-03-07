@@ -45,7 +45,12 @@ alias jieya='unzip -O CP936'
 alias pe='ps -ef'
 alias emacs='emacs -nw'
 alias pi='ssh pi@192.168.0.108'
+alias billdc='ssh root@billdc.com'
 alias conky='conky -c /home/neo/.conkycolors/conkyrc'
+alias splunkdj='splunk start && ./github/splunk-webframework-master/splunkdj start'
+
+
+
 
 #latest modify
 
